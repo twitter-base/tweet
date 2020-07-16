@@ -1,0 +1,109 @@
+# Author: Drewry Pope
+# Any copyright is dedicated to the Public Domain.
+# https://creativecommons.org/publicdomain/zero/1.0/
+#######################
+#######################
+#######################
+#####            ######
+#####    BLOCK   ######
+#####     ALL    ######
+#####            ######
+#######################
+#######################
+#######################
+
+
+
+*
+
+
+
+#######################
+#######################
+#######################
+#####            ######
+#####  ! EXCEPT  ######
+#####    ALLOWS  ######
+#####            ######
+#######################
+#######################
+#######################
+
+
+###########################################
+###########################################
+#### ONLY FILES THAT ARE IN THE IMAGE #####
+#### NEED TO BE BROUGHT IN, ALL ELSE  #####
+#### CAN BE IGNORED, INCLUDING FILES  #####
+#### AND FOLDERS MEANT TO BE MOUNTED! #####
+###########################################
+###########################################
+
+
+!LICENSE
+!index.js
+!server.js
+!package.json
+!CHANGELOG.md
+!CODE_OF_CONDUCT.md
+!CONTRIBUTORS.md
+!NOTICE.LICENSE.md
+!README.md
+
+
+#######################
+#######################
+#######################
+#####            ######
+#####   EXTRA    ######
+#####   BLOCKS   ######
+#####    FOR     ######
+#####   SAFETY   ######
+#####            ######
+#######################
+#######################
+#######################
+
+
+**/*.env
+**/*.png
+**/.env*
+**/.git*
+**/data/
+**/lib/
+**/dist/
+**/docs/
+**/mongo/
+**/mongodata/
+**/node_modules/
+
+
+#### EXAMPLES  ###################################################################
+#### ! = ALLOW ###################################################################
+## # Ignore a file or directory in the context root named "modules"
+## modules
+##
+## # Ignore any files or directories within the subdirectory named "modules"
+## # in the context root
+## modules/*
+##
+## # Ignore any files or directories in the context root beginning with "modules"
+## modules*
+##
+## # Ignore any files or directories one level down from the context root named
+## # "modules"
+## */modules
+##
+## # Ignore any files or directories at any level, including the context root,
+## # named modules
+## **/modules
+##
+## # Ignore every file in the entire build context (see next rule for how this
+## # could be used)
+## *
+##
+## # Re-include the file or directory named "src" that may have been previously
+## # excluded. Note that you cannot re-include files in subdirectories that have
+## # been previously excluded at a higher level
+## !src
+#### EXAMPLES #####################################################################
