@@ -2,6 +2,13 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+!**/.git
+!scripts/.*
+!.scripts/.*
+!scripts/*
+!.scripts/*
+!.scripts/.*
+!.scripts/.*
 **/node_modules/
 **/data/
 **/lib/
@@ -10,8 +17,14 @@
 **/*.png
 data
 app/data
-.git
 .*
+!**/.git
+!scripts/.*
+!.scripts/.*
+!scripts/*
+!.scripts/*
+!.scripts/.*
+!.scripts/.*
 !**/.scripts/*
 !**/scripts/*
 !**/.scripts
@@ -27,7 +40,6 @@ app/data
 !.yarnrc.yml.temp
 !.yarnrc.yml.clean.temp
 !.pnp.cjs
-!**/.git
 # Logs
 logs
 *.log
