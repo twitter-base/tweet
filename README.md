@@ -5,7 +5,7 @@
 
 ----
 
-# SpongeScribeBot
+# Twitter-Tweet
 strangetext transcription
  - source: https://github.com/twitter-base/image-generation/tree/main#readme
  - bot: https://twitter.com/SpongeScribe

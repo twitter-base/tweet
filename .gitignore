@@ -1,6 +1,7 @@
-# Author: Drewry Pope
-# Any copyright is dedicated to the Public Domain.
-# https://creativecommons.org/publicdomain/zero/1.0/
+# Copyright 2020 Drewry Pope
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 **/node_modules/
 **/data/
 **/lib/
@@ -11,17 +12,22 @@ data
 app/data
 .git
 .*
+!**/.scripts/*
+!**/scripts/*
+!**/.scripts
+!**/scripts
 !.git
 !.github
 !.gitignore
 !.yarn
-!.yarnrc
+.yarnrc
 !.yarnrc.temp
 !.yarnrc.clean.temp
 !.yarnrc.yml
 !.yarnrc.yml.temp
 !.yarnrc.yml.clean.temp
 !.pnp.cjs
+!**/.git
 # Logs
 logs
 *.log
@@ -126,3 +132,4 @@ dist
 
 # TernJS port file
 .tern-port
+
