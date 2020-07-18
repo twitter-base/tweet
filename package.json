@@ -3,29 +3,47 @@
   "type": "module",
   "version": "0.0.1",
   "description": "a module to get and send tweets",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "module": "lib/index.js",
+  "bin": {
+    "tweet": "./bin/server.js"
+  },
+  "scripts": {
+    "sleep": "sleep",
+    "start": "node --unhandled-rejections=strict --trace-warnings ./bin/server.js",
+    "test": "node --unhandled-rejections=strict --trace-warnings ./test/test.js",
+    "version": "echo \"$npm_package_version\""
+  },
   "exports": {
-    ".": "./index.js",
-    "./index": "./index.js",
-    "./index.js": "./index.js",
+    ".": "./lib/index.js",
+    "./index": "./lib/index.js",
+    "./index.js": "./lib/index.js",
+    "./lib/index": "./lib/index.js",
+    "./lib/index.js": "./lib/index.js",
+    "./server": "./bin/server.js",
+    "./server.js": "./bin/server.js",
+    "./bin/server": "./bin/server.js",
+    "./bin/server.js": "./bin/server.js",
+    "./sleep": "./bin/server.js",
+    "./sleep.js": "./bin/server.js",
+    "./bin/sleep": "./bin/server.js",
+    "./bin/sleep.js": "./bin/server.js",
     "./package.json": "./package.json"
   },
   "files": [
-    "package.json",
-    "index.js"
+    "/CHANGELOG.md",
+    "/CODE_OF_CONDUCT.md",
+    "/CONTRIBUTORS.md",
+    "/LICENSE",
+    "/NOTICE.LICENSE.md",
+    "/README.md",
+    "/bin/server.js",
+    "/lib/index.js",
+    "/package.json"
   ],
-  "module": "index.js",
-  "scripts": {
-    "build": "npm run start ; ",
-    "sleep": "node --unhandled-rejections=strict --trace-warnings sleep.js ; ",
-    "start": "node --unhandled-rejections=strict --trace-warnings -r dotenv/config index.js ; ",
-    "lint": "echo \"Error: no linter specified\" && exit 1 ; ",
-    "test": "echo \"Error: no test specified\" && exit 1 ; ",
-    "version": "echo $npm_package_version ; "
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpongeScribe/SpongeScribeBot.git"
+    "url": "git+https://github.com/twitter-base/twitter-tweet.git"
   },
   "keywords": [
     "accessibility",
@@ -102,6 +120,6 @@
     "twitter-lite": "^0.14.0"
   },
   "devDependencies": {
-    "sleep-atomic": "^0.9.5"
+    "sleep-atomic": "^0.9.7"
   }
 }

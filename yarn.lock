@@ -35,12 +35,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sleep-atomic@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "sleep-atomic@npm:0.9.5"
+"sleep-atomic@npm:^0.9.7":
+  version: 0.9.7
+  resolution: "sleep-atomic@npm:0.9.7"
   bin:
-    sleep: index.js
-  checksum: cf6b3fef140d70887c0ba9a29d9f4c22911b9684f96bfa1b60672cc95c3103f7938a57b25eea469111f9d33dd1c95a82b4d168f76ab3e6acf236ea06f976254d
+    sleep: server.js
+  checksum: 10bb532d51ed97dd02eb8ee2e4d00e61dc86036b63b9df10b267fd72561f2c69a720b2ff884b25ce7d945b0d3714856d5c240d4ed6fe23faf07a509b5887a13e
   languageName: node
   linkType: hard
 
@@ -59,7 +59,7 @@ __metadata:
   resolution: "twitter-tweet@workspace:."
   dependencies:
     dotenv: ^8.2.0
-    sleep-atomic: ^0.9.5
+    sleep-atomic: ^0.9.7
     twitter-lite: ^0.14.0
   languageName: unknown
   linkType: soft

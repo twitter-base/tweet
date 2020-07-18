@@ -70,7 +70,6 @@
 **/.env*
 **/.git*
 **/data/
-**/lib/
 **/dist/
 **/docs/
 **/mongo/
