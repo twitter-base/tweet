@@ -1,6 +1,7 @@
-    Author: Drewry Pope
-    Any copyright is dedicated to the Public Domain.
-    https://creativecommons.org/publicdomain/zero/1.0/
+    Copyright 2020 Drewry Pope
+    This Source Code Form is subject to the terms of the Mozilla Public
+    License, v. 2.0. If a copy of the MPL was not distributed with this
+    file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 <!-- ---- -->
 
@@ -35,17 +36,13 @@ https://github.com/olivierlacan/keep-a-changelog
 ### Changed
 - README.md, removed default from second export, cleanup markdown
 
-## [0.9.2] - 2020-07-12
+## [0.0.2] - 2020-07-18
 ### Changed
-- index.js, removed default from second export
+- server.js, fixed bug
 
-## [0.9.1] - 2020-07-12
+## [0.0.1] - 2020-07-18
 ### Added
-- added readme
-
-## [0.9.0] - 2020-07-12
-### Added
-- everything
+- basic tweet
 
 ----
 

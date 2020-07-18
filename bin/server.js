@@ -24,7 +24,7 @@ const params = ((inputSubdomain = 'api') => {
 (async () => {
   try {
     await tweet.send(
-      {process.argv[2] || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString() ,
+      process.argv[2] || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString() ,
       process.argv[3] || "" ,
       params
     ) ;
