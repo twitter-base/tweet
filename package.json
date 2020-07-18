@@ -112,9 +112,9 @@
   "author": "dezren39",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/SpongeScribe/SpongeScribeBot/issues"
+    "url": "https://github.com/twitter-base/tweet/issues"
   },
-  "homepage": "https://github.com/SpongeScribe/SpongeScribeBot/tree/main#readme",
+  "homepage": "https://github.com/twitter-base/tweet/tree/main#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "twitter-lite": "^0.14.0"
