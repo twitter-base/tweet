@@ -21,11 +21,18 @@ const params = ((inputSubdomain = 'api') => {
     access_token_secret
   } ;
 })() ;
+const args = process.argv ;
+console.log(args) ;
+args.shift() ;
+args.shift() ;
+const id = args[0] === "r" || args[0] === "-r" || args[0] === "/r" ? () => { args.shift() ; const id = args[0] ; console.log(id) ; return id ; } : "" ;
+const content = JSON.parse(args || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString()) ;
+console.log(content) ;
 (async () => {
   try {
     await tweet.send(
-      process.argv[2] || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString() ,
-      process.argv[3] || "" ,
+      content ,
+      id ,
       params
     ) ;
   } catch (error) { throw error }

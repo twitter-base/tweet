@@ -12,6 +12,7 @@
     "sleep": "sleep",
     "start": "node --unhandled-rejections=strict --trace-warnings ./bin/server.js",
     "test": "node --unhandled-rejections=strict --trace-warnings ./test/test.js",
+    "lint": "eslint lib",
     "version": "echo \"$npm_package_version\""
   },
   "exports": {
@@ -116,10 +117,24 @@
   },
   "homepage": "https://github.com/twitter-base/tweet/tree/main#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "@dezren39/chunk-text": "^1.1.1",
     "twitter-lite": "^0.14.0"
   },
+  "peerDependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
     "sleep-atomic": "^0.9.7"
   }
 }

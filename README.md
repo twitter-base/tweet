@@ -126,3 +126,13 @@ automate version increase ticker
 semver2.0
 
 ----
+
+
+Use within JSON
+Using JSON.stringify() with any BigInt value will raise a TypeError as BigInt values aren't serialized in JSON by default. However, you can implement your own toJSON method if needed:
+
+BigInt.prototype.toJSON = function() { return this.toString()  }
+Instead of throwing, JSON.stringify now produces a string like this:
+
+JSON.stringify(BigInt(1))
+// '"1"'
