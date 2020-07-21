@@ -25,9 +25,15 @@ const args = process.argv ;
 console.log(args) ;
 args.shift() ;
 args.shift() ;
-const id = args[0] === "r" || args[0] === "-r" || args[0] === "/r" ? () => { args.shift() ; const id = args[0] ; console.log(id) ; return id ; } : "" ;
+let id = null;
+if (args[0].toString().trim() == "r" || args[0].toString().trim() == "-r" || args[0].toString().trim() == "/r") {
+  args.shift() ;
+  id = args[0] ;
+  args.shift() ;
+  console.log(JSON.stringify([id])) ;
+}
 const content = [JSON.parse(JSON.stringify([args || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString()]))].flat(Infinity) ;
-console.log(content) ;
+console.log(JSON.stringify(content)) ;
 (async () => {
   try {
     await tweet.send(
