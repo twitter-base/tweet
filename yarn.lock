@@ -4726,6 +4726,7 @@ fsevents@^1.2.7:
     dotenv: ^8.2.0
   bin:
     tweet: ./bin/server.js
+    twitter-tweet: ./bin/server.js
   languageName: unknown
   linkType: soft
 
