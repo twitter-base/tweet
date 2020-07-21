@@ -26,7 +26,7 @@ console.log(args) ;
 args.shift() ;
 args.shift() ;
 const id = args[0] === "r" || args[0] === "-r" || args[0] === "/r" ? () => { args.shift() ; const id = args[0] ; console.log(id) ; return id ; } : "" ;
-const content = JSON.parse(args || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString()) ;
+const content = [JSON.parse(JSON.stringify([args || process.env.TWITTER_CONTENT || "HELLO WORLD, 'AT' " + new Date().toISOString()]))].flat(Infinity) ;
 console.log(content) ;
 (async () => {
   try {
