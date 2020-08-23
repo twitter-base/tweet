@@ -1061,7 +1061,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.5, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.10.5, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.8.4":
   version: 7.10.5
   resolution: "@babel/runtime@npm:7.10.5"
   dependencies:
@@ -1109,15 +1109,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dezren39/chunk-text@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@dezren39/chunk-text@npm:1.1.1"
+"@dezren39/chunk-text@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@dezren39/chunk-text@npm:1.1.3"
   dependencies:
     runes: ^0.4.3
   bin:
     chunk: bin/server.js
     chunk-text: bin/server.js
-  checksum: 404d9c39f2a534d33f7b0d62c5bd94a3ce94c48f5c49e8dad9d622a11adf17b31c0fb2fd1855f57a644b7ce1f672635f6dc9af89ae5b2dc4a9aeca5aeb33db78
+  checksum: a506c27df58eab3de9339e2acd2aa6ef15d007dc74cfe92ccb7ab705dd95072b7f35a8904ab285dba3148ba7268d8220b4f9ed8428c1fa447b8cc493122a9984
   languageName: node
   linkType: hard
 
@@ -3911,6 +3911,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"punycode@npm:1.4.1":
+  version: 1.4.1
+  resolution: "punycode@npm:1.4.1"
+  checksum: 5ce1e044cee2b12f1c65ccd523d7e71d6578f2c77f5c21c2e7a9d588535559c9508571d42638c131dab93cbe9a7b37bce1a7475d43fc8236c99dfe1efc36cfa5
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
@@ -4694,6 +4701,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"twemoji-parser@npm:^11.0.2":
+  version: 11.0.2
+  resolution: "twemoji-parser@npm:11.0.2"
+  checksum: 55d12b786e1316e81add6c78a9962fecae42a76c3936cd0798f561c3f4b18afcee73a817dfd083ff4bfdd20122b7df5ac06446f8fcba24faac7569777e95bda6
+  languageName: node
+  linkType: hard
+
 "twitter-lite@npm:^0.14.0":
   version: 0.14.0
   resolution: "twitter-lite@npm:0.14.0"
@@ -4701,6 +4715,18 @@ fsevents@^1.2.7:
     cross-fetch: ^3.0.0
     oauth-1.0a: ^2.2.4
   checksum: 7a0aca5b2411f671304c9f01f76c9fd673e9b32a7cdf01b56edfa8fb1cd28158077d668a71aa8de2f8e436f09334c37eca9d88b44813cd6b4dc10177485e37e2
+  languageName: node
+  linkType: hard
+
+"twitter-text@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "twitter-text@npm:3.1.0"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    core-js: ^2.5.0
+    punycode: 1.4.1
+    twemoji-parser: ^11.0.2
+  checksum: a77ab65f2b6942ff7882c29e81fa8214a77dbbd1db5dfd9c07209ee42acbc4cbb2caa42fe550193c5f342e8ec529366caf2aa69ccfb97d2cc8e66b94020bdb76
   languageName: node
   linkType: hard
 
@@ -4712,7 +4738,7 @@ fsevents@^1.2.7:
     "@babel/core": ^7.10.5
     "@babel/preset-env": ^7.10.4
     "@babel/runtime": ^7.10.5
-    "@dezren39/chunk-text": ^1.1.1
+    "@dezren39/chunk-text": ^1.1.3
     babel-core: ^6.26.3
     babel-eslint: ^10.1.0
     dotenv: ^8.2.0
@@ -4722,6 +4748,7 @@ fsevents@^1.2.7:
     prettier: ^2.0.5
     sleep-atomic: ^0.9.7
     twitter-lite: ^0.14.0
+    twitter-text: ^3.1.0
   peerDependencies:
     dotenv: ^8.2.0
   bin:

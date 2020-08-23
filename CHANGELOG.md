@@ -21,12 +21,15 @@ https://github.com/olivierlacan/keep-a-changelog
 ### Added
 - TODO: Cleanup/separate sleep-atomic module. Add/update links.
 
-## [0.9.4] - 2020-07-12
-### Changed
-- README.md, added import examples
-
-## [0.9.3] - 2020-07-12
+## [0.1.4] - 2020-07-12
 ### Added
+- add twitter-text permillage
+### Changed
+- upgrade chunk-text 
+
+## [0.1.3] - 2020-07-12
+### Added
+- README.md, added import examples
 - CHANGELOG.md
 - CODE\_OF\_CONDUCT.md
 - CONTRIBUTORS.md
