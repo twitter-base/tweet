@@ -1,7 +1,7 @@
 {
   "name": "twitter-tweet",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "a module to get and send tweets",
   "main": "./lib/index.js",
   "module": "lib/index.js",
@@ -55,7 +55,7 @@
   },
   "homepage": "https://github.com/twitter-base/tweet/tree/main#readme",
   "dependencies": {
-    "@dezren39/chunk-text": "^1.1.101",
+    "chunk-text": "^2.0.0",
     "twitter-lite": "^0.14.0",
     "twitter-text": "^3.1.0"
   },

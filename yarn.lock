@@ -1109,18 +1109,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dezren39/chunk-text@npm:^1.1.101":
-  version: 1.1.101
-  resolution: "@dezren39/chunk-text@npm:1.1.101"
-  dependencies:
-    runes: ^0.4.3
-  bin:
-    chunk: bin/server.js
-    chunk-text: bin/server.js
-  checksum: 825971ae4fc51703921df94ff9c8c4b06f71209b4c7559481281f159778d0bf026d7b973dd3cace2a2673436b29ba9576de7aabf83769e0c1e116a7df8536694
-  languageName: node
-  linkType: hard
-
 "@types/color-name@npm:^1.1.1":
   version: 1.1.1
   resolution: "@types/color-name@npm:1.1.1"
@@ -1740,6 +1728,18 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: b06ba0bf4218bc2214cdb94a7d0200db5c6425f9425795c064dcf5a3801aac8ae87f764727890cd1f48c026559159e7e0e15ed3d1940ce453dec54898d013379
+  languageName: node
+  linkType: hard
+
+"chunk-text@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "chunk-text@npm:2.0.0"
+  dependencies:
+    runes: ^0.4.3
+  bin:
+    chunk: bin/server.js
+    chunk-text: bin/server.js
+  checksum: 70272868b387f4a605b41c936c31a3c64f54a6a5c369be9bec1b9cdf550c43ad722747546b3a104499bf09fb078b6f477e600956541281020caccbd67c44b5d6
   languageName: node
   linkType: hard
 
@@ -4738,9 +4738,9 @@ fsevents@^1.2.7:
     "@babel/core": ^7.10.5
     "@babel/preset-env": ^7.10.4
     "@babel/runtime": ^7.10.5
-    "@dezren39/chunk-text": ^1.1.101
     babel-core: ^6.26.3
     babel-eslint: ^10.1.0
+    chunk-text: ^2.0.0
     dotenv: ^8.2.0
     eslint: ^7.5.0
     eslint-plugin-import: ^2.22.0
