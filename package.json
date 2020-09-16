@@ -19,6 +19,7 @@
     "semantic-release": "semantic-release",
     "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file",
     "changelog:unreleased": "conventional-changelog --preset angular --output-unreleased",
+    "version": "json version -a < package.json",
     "lint": "eslint lib",
     "tweet": "npm run start",
     "twitter-tweet": "npm run start"

@@ -2,8 +2,9 @@
 set -eu
 
 readonly CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "$CURRENT_BRANCH Version: $(yarn version)"
 if [ "$CURRENT_BRANCH" != main ]; then
-  echo "You must be on 'master' branch to publish a release, aborting..."
+  echo "You must be on 'main' branch to publish a release, aborting..."
   exit 1
 fi
 
@@ -12,47 +13,62 @@ if ! git diff-index --quiet HEAD --; then
   exit 1
 fi
 
+rm -rf node_modules/ dist/
+
+if ! yarn; then
+  echo "Failed to install modules first-pass, aborting..."
+  exit 1
+fi
+
 if ! yarn run build; then
-  echo "Failed to build dist files, aborting..."
+  echo "Failed to build dist files first-pass, aborting..."
   exit 1
 fi
 
 if ! yarn test; then
-  echo "Tests failed, aborting..."
+  echo "Tests failed first-pass, aborting..."
   exit 1
 fi
 
-yarn run changelog:unreleased
+if ! yarn run changelog:unreleased; then
+  echo "Failed to update changelog:unreleased, aborting..."
+  exit 1
+fi
 
 # Only update the package.json version
 # We need to update changelog before tagging
 # And publishing.
-yarn version
 
 if ! yarn run changelog; then
   echo "Failed to update changelog, aborting..."
   exit 1
 fi
 
-yarn
-yarn build
+if ! yarn; then
+  echo "Failed to install modules second-pass, aborting..."
+  exit 1
+fi
 
-readonly PACKAGE_VERSION=$(< package.json grep version \
-  | head -1 \
-  | awk -F: '{ print $2 }' \
-  | sed 's/[",]//g' \
-  | tr -d '[:space:]')
+if ! yarn run build; then
+  echo "Failed to build dist files second-pass, aborting..."
+  exit 1
+fi
+
+if ! yarn test; then
+  echo "Tests failed second-pass, aborting..."
+  exit 1
+fi
 
 # Gives user a chance to review and eventually abort.
 git add --patch
-
-git commit --message="chore(release): v${PACKAGE_VERSION}"
+readonly PACKAGE_VERSION=$(yarn version)
+git commit --message="chore(prerelease): changelog from previous version: v${PACKAGE_VERSION}"
 
 git push origin HEAD
 
-npm publish
+# git push --tags
+yarn semantic-version
 
-git tag "v$PACKAGE_VERSION"
-git push --tags
-
-echo "Pushed package to npm, and also pushed 'v$PACKAGE_VERSION' tag to git repository."
+echo "Previous Version: $PACKAGE_VERSION"
+echo "Current Version: $(yarn version)"
+echo "Pushed package to npm, and also pushed tag to git repository."
