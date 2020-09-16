@@ -14,11 +14,12 @@
     "start": "node --unhandled-rejections=strict --trace-warnings ./bin/server.js",
     "test": "node --unhandled-rejections=strict --trace-warnings ./test/test.js",
     "build": "",
-    "commit": "cz",
+    "cz": "cz",
+    "commit": "commit",
+    "semantic-release": "semantic-release",
     "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file",
     "changelog:unreleased": "conventional-changelog --preset angular --output-unreleased",
     "lint": "eslint lib",
-    "version": "json version -a < package.json",
     "tweet": "npm run start",
     "twitter-tweet": "npm run start"
   },
@@ -44,7 +45,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twitter-base/twitter-tweet.git"
+    "url": "git+https://github.com/twitter-base/tweet.git"
   },
   "keywords": [
     "twitter",
@@ -66,6 +67,7 @@
   "dependencies": {
     "@dezren39/chunk-text": "^2.0.1",
     "chunk-text": "^2.0.0",
+    "semantic-release": "^17.1.1",
     "twitter-lite": "^0.14.0",
     "twitter-text": "^3.1.0"
   },
@@ -79,6 +81,7 @@
     "@babel/runtime": "^7.11.2",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt-cli": "^11.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.1",
@@ -96,5 +99,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ]
   }
 }
