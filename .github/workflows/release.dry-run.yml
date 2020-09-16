@@ -1,12 +1,12 @@
 name: DRY-RUN Release
 on: [push, pull_request, pull_request_target, create, fork, release]
 jobs:
-  check:
+  release.dry-run:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [ '14' ]
-    name: Check - Node.js - ${{ matrix.node }}
+    name: DRY-RUN Release - Node.js - ${{ matrix.node }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
