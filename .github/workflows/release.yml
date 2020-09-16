@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   release:
     name: Release
@@ -10,17 +10,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2-beta
         with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test # will run `yarn test` command 
+          node-version: '14'
+          check-latest: true
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn test
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: semantic-release # will run `yarn semantic-release` command 
+        run: yarn semantic-release
