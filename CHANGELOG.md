@@ -3,6 +3,22 @@
 
 ### Bug Fixes
 
+* **releases:** changed release branch from master to main ([2117ec0](https://github.com/twitter-base/tweet/commit/2117ec00c8a901039ed0424652196116de627b4c))
+* **version:** ci/cd npm version script now works using 'json' devDepency ([f13a47f](https://github.com/twitter-base/tweet/commit/f13a47fbb5de8cb6a8635384e6e204f1e41ac51c))
+
+
+### Features
+
+* **releases:** use semantic-release and run-script version in bin/release.sh ([e59ada0](https://github.com/twitter-base/tweet/commit/e59ada01c27a7d5f138bd162546d32a5eaf85b75))
+* **versioning:** semantic-release installed ([3a1426a](https://github.com/twitter-base/tweet/commit/3a1426a2f8ab3ba85088b3f0afb218b210c90c1a))
+
+
+
+# 0.2.0 (2020-09-16)
+
+
+### Bug Fixes
+
 * **releases:** changed release branch from master to main ([2117ec0](https://github.com/twitter-base/twitter-tweet/commit/2117ec00c8a901039ed0424652196116de627b4c))
 * **version:** ci/cd npm version script now works using 'json' devDepency ([f13a47f](https://github.com/twitter-base/twitter-tweet/commit/f13a47fbb5de8cb6a8635384e6e204f1e41ac51c))
 
