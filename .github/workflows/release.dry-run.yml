@@ -1,4 +1,4 @@
-name: DRY-RUN Release
+name: Release DRY-RUN
 on: [push, pull_request, pull_request_target, create, fork, release]
 jobs:
   release_dry-run:
@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         node: [ '14' ]
-    name: DRY-RUN Release - Node.js - ${{ matrix.node }}
+    name: Release DRY-RUN - Node.js - ${{ matrix.node }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
