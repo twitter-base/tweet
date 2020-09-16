@@ -12,7 +12,7 @@
   "scripts": {
     "sleep": "sleep",
     "start": "node --unhandled-rejections=strict --trace-warnings ./bin/server.js",
-    "test": "node --unhandled-rejections=strict --trace-warnings ./test/test.js",
+    "test": "node --trace-warnings ./test/test.js",
     "build": "",
     "cz": "cz",
     "commit": "commit",
