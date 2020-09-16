@@ -13,6 +13,7 @@
     "sleep": "sleep",
     "start": "node --unhandled-rejections=strict --trace-warnings ./bin/server.js",
     "test": "node --unhandled-rejections=strict --trace-warnings ./test/test.js",
+    "build": "",
     "commit": "cz",
     "changelog": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file",
     "changelog:unreleased": "conventional-changelog --preset angular --output-unreleased",

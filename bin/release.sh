@@ -2,7 +2,7 @@
 set -eu
 
 readonly CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [ "$CURRENT_BRANCH" != master ]; then
+if [ "$CURRENT_BRANCH" != main ]; then
   echo "You must be on 'master' branch to publish a release, aborting..."
   exit 1
 fi
