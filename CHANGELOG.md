@@ -1,3 +1,13 @@
+# 0.2.0 (2020-09-16)
+
+
+### Bug Fixes
+
+* **releases:** changed release branch from master to main ([2117ec0](https://github.com/twitter-base/twitter-tweet/commit/2117ec00c8a901039ed0424652196116de627b4c))
+* **version:** ci/cd npm version script now works using 'json' devDepency ([f13a47f](https://github.com/twitter-base/twitter-tweet/commit/f13a47fbb5de8cb6a8635384e6e204f1e41ac51c))
+
+
+
     Copyright 2020 Drewry Pope
     This Source Code Form is subject to the terms of the Mozilla Public
     License, v. 2.0. If a copy of the MPL was not distributed with this

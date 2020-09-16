@@ -4228,6 +4228,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"json@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "json@npm:10.0.0"
+  bin:
+    json: lib/json.js
+  checksum: 18e761ba89b9daa401be33f04f9cf859e7901525599cf4f91b1b7f38ae588ffd83d8b4f6509e87891fd0c374d92e8a1f631515920d7f88f9b006f16aed8f94fa
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^4.0.0":
   version: 4.0.0
   resolution: "jsonfile@npm:4.0.0"
@@ -6316,6 +6325,7 @@ fsevents@^1.2.7:
     eslint-plugin-import: ^2.22.0
     eslint-plugin-prettier: ^3.1.4
     husky: ^4.3.0
+    json: ^10.0.0
     prettier: ^2.1.2
     sleep-atomic: ^1.0.0
     twitter-lite: ^0.14.0
