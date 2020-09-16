@@ -5,27 +5,37 @@ on:
     - main
     - next
   pull_request:
-    branches:
-      - '*'
+    branches: 
+      - main
+      - next
+      - dev
+  pull_request_target:
+    branches: 
+      - main
+      - next
+      - dev
 jobs:
   release:
-    name: Release
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '14' ]
+    name: Release - Node.js - ${{ matrix.node }}
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2-beta
         with:
-          node-version: '14'
+          node-version: ${{ matrix.node }}
           check-latest: true
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn install #--immutable --immutable-cache --check-cache
-      - name: Build Target
+      - name: Build target
         run: yarn build
-      - name: Test Code
+      - name: Test code
         run: yarn test
-      - name: Release Package
+      - name: Release package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
