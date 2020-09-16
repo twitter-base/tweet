@@ -1,26 +1,12 @@
-name: Release
-on:
-  push:
-    branches:
-    - main
-    - next
-  pull_request:
-    branches: 
-      - main
-      - next
-      - dev
-  pull_request_target:
-    branches: 
-      - main
-      - next
-      - dev
+name: Check
+on: [push, pull_request, pull_request_target, create, fork, release]
 jobs:
-  release:
+  check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '14' ]
-    name: Release - Node.js - ${{ matrix.node }}
+        node: [ '14', '12', '10' ]
+    name: Check - Node.js - ${{ matrix.node }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -35,8 +21,3 @@ jobs:
         run: yarn build
       - name: Test code
         run: yarn test
-      - name: Release package
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn semantic-release
