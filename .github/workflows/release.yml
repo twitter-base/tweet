@@ -8,20 +8,20 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
           check-latest: true
-      - name: Install dependencies
+      - name: Install Dependencies
         run: yarn install --immutable --immutable-cache --check-cache
-      - name: Build
+      - name: Build Target
         run: yarn build
-      - name: Test
+      - name: Test Code
         run: yarn test
-      - name: Release
+      - name: Release Package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
