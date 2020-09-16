@@ -1,12 +1,12 @@
-name: Checks
+name: Check
 on: [push, pull_request]
 jobs:
-  checks:
+  check:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 'latest', '14', '12', '10' ]
-    name: Checks - Node.js(${{ matrix.node }})
+        node: [ '14', '12', '10' ]
+    name: Check - Node.js - ${{ matrix.node }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install #--immutable --immutable-cache --check-cache
       - name: Build target
         run: yarn build
       - name: Test code
