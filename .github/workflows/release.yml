@@ -1,9 +1,10 @@
-name: Release
+name: Release Package
 on:
   push:
     branches:
     - main
     - next
+    - dev
   pull_request:
     branches: 
       - main
