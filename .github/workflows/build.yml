@@ -1,0 +1,23 @@
+name: Check
+on: [push, pull_request, pull_request_target, create, fork, release]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '14', '12', '10' ]
+    name: Check - Node.js - ${{ matrix.node }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+      - name: Install dependencies
+        run: yarn install #--immutable --immutable-cache --check-cache
+      - name: Build target
+        run: yarn build
+      - name: Test code
+        run: yarn test
