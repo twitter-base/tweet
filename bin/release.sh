@@ -27,7 +27,7 @@ yarn run changelog:unreleased
 # Only update the package.json version
 # We need to update changelog before tagging
 # And publishing.
-yarn version --no-git-tag-version
+yarn version
 
 if ! yarn run changelog; then
   echo "Failed to update changelog, aborting..."
