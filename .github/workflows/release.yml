@@ -20,7 +20,7 @@ jobs:
           node-version: '14'
           check-latest: true
       - name: Install Dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install #--immutable --immutable-cache --check-cache
       - name: Build Target
         run: yarn build
       - name: Test Code
