@@ -97,7 +97,7 @@
     "husky": "^4.3.0",
     "json": "^10.0.0",
     "prettier": "^2.1.2",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^19.0.3",
     "sleep-atomic": "^1.0.0"
   },
   "config": {
