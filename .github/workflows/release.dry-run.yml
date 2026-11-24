@@ -1,5 +1,5 @@
 name: Release DRY-RUN
-on: [push, pull_request, pull_request_target, create, fork, release]
+on: [push, pull_request, create, fork, release]
 jobs:
   release_dry-run:
     runs-on: ubuntu-latest
