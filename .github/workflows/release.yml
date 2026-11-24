@@ -10,11 +10,6 @@ on:
       - main
       - next
       - dev
-  pull_request_target:
-    branches: 
-      - main
-      - next
-      - dev
 jobs:
   release:
     runs-on: ubuntu-latest
